@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Опрос {% endblock %}
+
+{% block content %}
+<form action="/process" method = 'GET'>
+    <fieldset>
+    <legend><b>Как вы предпочитаете пить чай </b></legend>
+    <br> Ваш возраст? <br>
+    <input type="number" name="age"><br>
+    <br> Ваш пол? <br>
+    <input type="radio" name="gender" value="male"> Мужской <br>
+    <input type="radio" name="gender" value="female"> Женский <br>
+    <input type="radio" name="gender" value="not_stated"> Не указан <br>
+    <br> Пьёте ли вы чай? <br>
+    <input type="radio" name="tea" value="yes"> Да <br>
+    <input type="radio" name="tea" value="no"> Нет <br>
+    <br> Какой чай вы пьёте? <br>
+    <input type="checkbox" name="teatype" value="is_gray"> чёрный <br>
+    <input type="checkbox" name="teatype" value="is_green"> зелёный <br>
+    <input type="checkbox" name="teatype" value="is_red"> красный <br>
+    <input type="checkbox" name="teatype" value="is_white"> белый <br>    
+    Другое (можете перечислить через запятую) <br>
+    <input type="text" name="teatype"><br>   
+    <br> Пьёте ли вы чай с сахаром? <br>
+    <input type="radio" name="sugartea" value="always"> Да, всегда <br>
+    <input type="radio" name="sugartea" value="sometimes"> Да, иногда <br>
+    <input type="radio" name="sugartea" value="never"> Нет <br>
+    <br> Пьёте ли вы чай с молоком? <br>
+    <input type="radio" name="milktea" value="always"> Да, всегда <br>
+    <input type="radio" name="milktea" value="sometimes"> Да, иногда <br>
+    <input type="radio" name="milktea" value="never"> Нет <br>
+    <br> С чем ещё вы пьёте чай? <br>
+    Например: лимон, мёд, варенье<br>
+    <input type="text" name="addings"><br>
+    <br>
+    <input class="btn btn-light" style="background-color:#F4A460;" type="submit" value="Отправить">
+    </fieldset>
+</form>
+{% endblock %}

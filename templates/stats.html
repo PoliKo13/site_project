@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} Статистика {% endblock %}
+
+{% block content %}
+    <table class="table">
+    <p> Статистика возраста опрошенных </p>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Минимальный</th>
+      <th scope="col">Максимальный</th>
+      <th scope="col">Средний</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Возраст</th>
+      <td> {{ all_info['age_min'] }} </td>
+      <td> {{ all_info['age_max'] }} </td>
+      <td> {{ all_info['age_mean'] }} </td>
+    </tr>
+  </tbody>
+
+
+        <table class="table">
+    <br><p>Подсчёт ответов на вопросы</p>
+  <thead>
+    <tr>
+      <th scope="col">Вопрос про...</th>
+      <th scope="col">Всегда</th>
+      <th scope="col">Иногда</th>
+      <th scope="col">Никогда</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Сахар</th>
+      <td> {{ all_info['sugar_a'] }} </td>
+      <td> {{ all_info['sugar_s'] }} </td>
+      <td> {{ all_info['sugar_n'] }} </td>
+    </tr>
+    <tr>
+      <th scope="row">Молоко</th>
+      <td> {{ all_info['milk_a'] }} </td>
+      <td> {{ all_info['milk_s'] }} </td>
+      <td> {{ all_info['milk_n'] }} </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
